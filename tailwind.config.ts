@@ -9,8 +9,15 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        'scheme-bg': 'var(--scheme-bg)',
+        'black-ink': '#0a0a0a',
+        'cinnabar': '#e8464e',
+        'fall-green': '#dae8b6',
+        'blue-chalk': '#dcd5ea',
+        'misty-rose': '#ffd3f1',
+      },
+      fontFamily: {
+        sans: ['DM Sans', 'Syne', 'sans-serif'],
       },
     },
   },
