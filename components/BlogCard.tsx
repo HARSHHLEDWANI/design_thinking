@@ -35,12 +35,10 @@ export default function BlogCard({ post }: { post: BlogPost }) {
         {post.excerpt}
       </p>
 
-      <div className="flex items-center justify-between mt-auto">
+      <div className="mt-auto">
         <span style={{ fontSize: 12, fontWeight: 300 }}>{post.date}</span>
-        <span className="slide-link" style={{ fontSize: 14, fontWeight: 500 }}>
-          Read More →
-        </span>
       </div>
     </div>
   );
 }
+

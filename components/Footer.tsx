@@ -10,7 +10,7 @@ const QUICK_LINKS = [
 ];
 
 const SOCIAL_LINKS = [
-  { label: 'LinkedIn',         href: 'https://linkedin.com' },
+  { label: 'LinkedIn',         href: 'https://www.linkedin.com/in/bhavna-ambudkar-2683a919/' },
   { label: 'ResearchGate',     href: 'https://researchgate.net' },
   { label: 'ORCID',            href: 'https://orcid.org' },
   { label: 'Institutional',    href: 'https://sitpune.edu.in' },
