@@ -363,11 +363,11 @@ img {
 .workshop-pill {
   border: 2px solid var(--black);
   border-radius: 999px;
-  height: 180px;
+  min-height: 160px;
   display: flex;
   align-items: center;
-  padding: 0 48px;
-  gap: 48px;
+  padding: 24px 48px;
+  gap: 32px;
   transition: background 0.25s ease, transform 0.2s ease;
   overflow: hidden;
 }
@@ -490,10 +490,25 @@ img {
   align-self: stretch;
 }
 
-/* ─── GSAP INITIAL STATE ─── */
+/* ─── GSAP REVEAL — CSS FALLBACK ANIMATION ─── */
+/* Cards animate in via CSS automatically, so they are NEVER stuck invisible.
+   GSAP enhances the effect on scroll when it initialises, but CSS guarantees
+   visibility regardless of JS timing. */
+@keyframes card-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .gsap-reveal {
-  opacity: 0;
-  transform: translateY(60px);
+  animation: card-fade-in 0.6s ease forwards;
+  animation-delay: 0.1s;
+  opacity: 0; /* initial state before animation fires */
 }
 
 /* ─── SCROLLBAR ─── */
@@ -537,19 +552,20 @@ img {
   align-items: start;
 }
 
-.stats-vdivider {
-  grid-row: 1 / 2;
-}
-
-.stats-vdivider-2 {
-  grid-row: 3 / 4;
-}
+.stats-item-1 { grid-column: 1; grid-row: 1; }
+.stats-vdivider { grid-column: 2; grid-row: 1; }
+.stats-item-2 { grid-column: 3; grid-row: 1; }
 
 .stats-hdivider {
   grid-column: 1 / 4;
+  grid-row: 2;
   height: 1px;
   background: var(--black);
 }
+
+.stats-item-3 { grid-column: 1; grid-row: 3; }
+.stats-vdivider-2 { grid-column: 2; grid-row: 3; }
+.stats-item-4 { grid-column: 3; grid-row: 3; }
 
 /* ─── RESPONSIVE ─── */
 @media (max-width: 768px) {

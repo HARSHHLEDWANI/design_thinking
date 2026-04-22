@@ -75,13 +75,13 @@ export default function HomePage() {
             {/* Stats cluster */}
             <ScrollReveal>
               <div className="stats-grid">
-                <CounterStat value={15} suffix="+" label="Years of Experience" />
+                <div className="stats-item-1"><CounterStat value={15} suffix="+" label="Years of Experience" /></div>
                 <div className="v-divider stats-vdivider" />
-                <CounterStat value={500} suffix="+" label="Students Mentored" />
+                <div className="stats-item-2"><CounterStat value={500} suffix="+" label="Students Mentored" /></div>
                 <div className="stats-hdivider" />
-                <CounterStat value={80} suffix="+" label="Workshops Conducted" />
+                <div className="stats-item-3"><CounterStat value={80} suffix="+" label="Workshops Conducted" /></div>
                 <div className="v-divider stats-vdivider-2" />
-                <CounterStat value={12} label="Research Publications" />
+                <div className="stats-item-4"><CounterStat value={12} label="Research Publications" /></div>
               </div>
             </ScrollReveal>
 

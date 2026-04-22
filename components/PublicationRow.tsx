@@ -1,5 +1,4 @@
 import type { Publication } from '@/lib/data';
-import MarqueeButton from './MarqueeButton';
 
 export default function PublicationRow({ pub }: { pub: Publication }) {
   return (
@@ -26,11 +25,8 @@ export default function PublicationRow({ pub }: { pub: Publication }) {
           </p>
         </div>
 
-        {/* CTA */}
-        <div className="flex-shrink-0 hidden md:block">
-          <MarqueeButton label="Read →" href={pub.url ?? '#'} small />
-        </div>
       </div>
     </div>
   );
 }
+

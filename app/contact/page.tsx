@@ -88,7 +88,7 @@ export default function ContactPage() {
                     LinkedIn
                   </p>
                   <a
-                    href="https://linkedin.com"
+                    href="https://www.linkedin.com/in/bhavna-ambudkar-2683a919/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="slide-link"
